@@ -28,6 +28,7 @@ function playGame() {
   // *CODE GOES BELOW HERE *
   let numberGuess = document.getElementById("number-guess").value;
   displayResult(numberGuess);
+  console.log(correctNumber);
   saveGuessHistory(numberGuess);
   displayHistory();
 }
@@ -42,7 +43,7 @@ function displayResult(numberGuess) {
     showNumberAbove();
   } else if (numberGuess < correctNumber) {
     showNumberBelow();
-  } else if (numberGuess === correctNumber) {
+  } else if (numberGuess == correctNumber) {
     showYouWon();
   }
 }
